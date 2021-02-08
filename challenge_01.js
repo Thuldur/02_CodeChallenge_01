@@ -9,8 +9,39 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 ‘Die Summe der Zahlen ist: summe ‘
 */
 
-let number1 = parseInt(prompt("Bitte die erste Zahl eingeben:"));
-let number2 = parseInt(prompt("Bitte die zweite Zahl eingeben:"));
-let summe = number1 + number2;
+let number1 = parseFloat(prompt("Bitte die erste Zahl eingeben:"),10,2);
+let operator = prompt("Bitte Operator eingeben:")
+while (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/" && operator !== "<" && operator !== ">")
+ {
+    operator = prompt("Bitte einen Operator + - * / < > auswählen!")
+}
+let number2 = parseFloat(prompt("Bitte die zweite Zahl eingeben:"),10,2);
+let summe;
 
-console.log(number1 + " + " + number2 + " = " + summe);
+if (operator === "+" ) 
+{
+    summe = number1 + number2;
+} 
+else if (operator === "-" ) 
+{
+    summe = number1 - number2;
+} 
+else if (operator === "*" ) 
+{
+    summe = number1 * number2;
+} 
+else if (operator === "/" ) 
+{
+    summe = number1 / number2;
+} 
+else if (operator === "<" ) 
+{
+    summe = number1 < number2;
+} 
+else if (operator === ">" ) 
+{
+    summe = number1 > number2;
+} 
+
+console.log(operator);
+console.log(number1 + operator + number2 + " = " + summe);
