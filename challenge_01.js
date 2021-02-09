@@ -18,7 +18,7 @@ while (operator !== "+" && operator !== "-" && operator !== "*" && operator !== 
 let number2 = parseFloat(prompt("Bitte die zweite Zahl eingeben:"));
 let summe;
 
-if (operator === "+" ) 
+/**if (operator === "+" ) 
 {
     summe = number1 + number2;
 } 
@@ -41,7 +41,13 @@ else if (operator === "<" )
 else if (operator === ">" ) 
 {
     summe = number1 > number2;
-} 
+} */
+
+if (operator !== "<" && operator !== ">" ) 
+{
+    summe = summe.toFixed(2);
+};
+
 
 console.log(operator);
-console.log(number1 + operator + number2 + " = " + summe);
+console.log(number1 + " " + operator + " " + number2 + " = " + summe);
